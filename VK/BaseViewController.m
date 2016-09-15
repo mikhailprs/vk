@@ -9,7 +9,9 @@
 #import "BaseViewController.h"
 #import "SWRevealViewController.h"
 #import "Masonry/Masonry.h"
+#import "AppDelegate.h"
 
+#import "Router.h"
 @interface BaseViewController () <UIWebViewDelegate>
 
 @property (strong, nonatomic) UIWebView *vKwebView;
@@ -20,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor grayColor];
     [self initStartup];
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -32,13 +35,25 @@
 
 
 - (void)initStartup{
-    SWRevealViewController *revealViewController = self.revealViewController;
-    if ( revealViewController )
-    {
-        [self.navigationItem.backBarButtonItem setTarget: self.revealViewController];
-        [self.navigationItem.backBarButtonItem setAction: @selector( revealToggle: )];
-        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
-    }
+//    Router *router = [Router new];
+    
+     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+//    SWRevealViewController *revealController = [self revealViewController];
+    UIWindow *window = appDelegate.window;
+    SWRevealViewController *revealController = (id)window.rootViewController;
+    
+    
+    [revealController panGestureRecognizer];
+    [revealController tapGestureRecognizer];
+    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Show"
+                                                                         style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
+//    
+//    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
+//                                                                         style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
+    
+    self.navigationItem.leftBarButtonItem = revealButtonItem;
+    
     
     _vKwebView = [[UIWebView alloc] init];
     self.vKwebView.delegate = self;

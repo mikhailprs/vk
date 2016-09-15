@@ -14,6 +14,8 @@
 		C2C61FD61D71AB1D00294518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C61FD41D71AB1D00294518 /* Main.storyboard */; };
 		C2C61FD81D71AB1D00294518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C61FD71D71AB1D00294518 /* Assets.xcassets */; };
 		C2C61FDB1D71AB1D00294518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C61FD91D71AB1D00294518 /* LaunchScreen.storyboard */; };
+		C2C73B2D1D8B323E0076FB88 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C73B2C1D8B323E0076FB88 /* Router.m */; };
+		C2C73B301D8B33480076FB88 /* RearViewControlller.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C73B2F1D8B33480076FB88 /* RearViewControlller.m */; };
 		C2D0DBA91D85C23A00A20C29 /* APIServerMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0DBA81D85C23A00A20C29 /* APIServerMethods.m */; };
 		C2D0DBAC1D85C55F00A20C29 /* UrlContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D0DBAB1D85C55F00A20C29 /* UrlContainer.m */; };
 		D102A17357743EFAEE4D65A3 /* libPods-VK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA6E7634C6FAFB5DC7839E6 /* libPods-VK.a */; };
@@ -33,6 +35,10 @@
 		C2C61FD71D71AB1D00294518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2C61FDA1D71AB1D00294518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2C61FDC1D71AB1D00294518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C73B2B1D8B323E0076FB88 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		C2C73B2C1D8B323E0076FB88 /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Router.m; sourceTree = "<group>"; };
+		C2C73B2E1D8B33480076FB88 /* RearViewControlller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewControlller.h; sourceTree = "<group>"; };
+		C2C73B2F1D8B33480076FB88 /* RearViewControlller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewControlller.m; sourceTree = "<group>"; };
 		C2D0DBA71D85C23A00A20C29 /* APIServerMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIServerMethods.h; sourceTree = "<group>"; };
 		C2D0DBA81D85C23A00A20C29 /* APIServerMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIServerMethods.m; sourceTree = "<group>"; };
 		C2D0DBAA1D85C55F00A20C29 /* UrlContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlContainer.h; sourceTree = "<group>"; };
@@ -93,9 +99,11 @@
 			isa = PBXGroup;
 			children = (
 				C2C61FCE1D71AB1D00294518 /* AppDelegate.h */,
+				C2C61FCF1D71AB1D00294518 /* AppDelegate.m */,
 				C2221CC61D87383000C7A86C /* BaseViewController.h */,
 				C2221CC71D87383000C7A86C /* BaseViewController.m */,
-				C2C61FCF1D71AB1D00294518 /* AppDelegate.m */,
+				C2C73B2E1D8B33480076FB88 /* RearViewControlller.h */,
+				C2C73B2F1D8B33480076FB88 /* RearViewControlller.m */,
 				C2C61FD41D71AB1D00294518 /* Main.storyboard */,
 				C2C61FD71D71AB1D00294518 /* Assets.xcassets */,
 				C2C61FD91D71AB1D00294518 /* LaunchScreen.storyboard */,
@@ -106,6 +114,8 @@
 				C2D0DBAA1D85C55F00A20C29 /* UrlContainer.h */,
 				C2D0DBAB1D85C55F00A20C29 /* UrlContainer.m */,
 				C2221CCC1D873F7F00C7A86C /* SWRevealViewController */,
+				C2C73B2B1D8B323E0076FB88 /* Router.h */,
+				C2C73B2C1D8B323E0076FB88 /* Router.m */,
 			);
 			path = VK;
 			sourceTree = "<group>";
@@ -253,6 +263,8 @@
 				C2D0DBAC1D85C55F00A20C29 /* UrlContainer.m in Sources */,
 				C2D0DBA91D85C23A00A20C29 /* APIServerMethods.m in Sources */,
 				C2C61FCD1D71AB1D00294518 /* main.m in Sources */,
+				C2C73B301D8B33480076FB88 /* RearViewControlller.m in Sources */,
+				C2C73B2D1D8B323E0076FB88 /* Router.m in Sources */,
 				C2221CCF1D873F7F00C7A86C /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

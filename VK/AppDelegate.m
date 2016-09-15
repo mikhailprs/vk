@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Router.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    Router *router = [Router new];
     // Override point for customization after application launch.
     return YES;
 }

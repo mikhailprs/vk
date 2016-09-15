@@ -8,6 +8,7 @@
         <!--Base View Controller-->
         <scene sceneID="lKZ-9t-WbT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6er-eA-bIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="uxe-zw-7Ua" customClass="BaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="toV-iM-h2C"/>
@@ -22,7 +23,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Show" id="tLi-Gz-xpc"/>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6er-eA-bIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1337" y="326"/>
         </scene>
