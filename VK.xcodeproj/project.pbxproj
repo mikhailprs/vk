@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5434A72E1D8C2C0E0078B7B7 /* FrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5434A72D1D8C2C0E0078B7B7 /* FrontViewController.m */; };
 		C2221CC81D87383000C7A86C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2221CC71D87383000C7A86C /* BaseViewController.m */; };
 		C2221CCF1D873F7F00C7A86C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2221CCE1D873F7F00C7A86C /* SWRevealViewController.m */; };
 		C2C61FCD1D71AB1D00294518 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C61FCC1D71AB1D00294518 /* main.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5434A72C1D8C2C0E0078B7B7 /* FrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontViewController.h; sourceTree = "<group>"; };
+		5434A72D1D8C2C0E0078B7B7 /* FrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontViewController.m; sourceTree = "<group>"; };
 		9EA6E7634C6FAFB5DC7839E6 /* libPods-VK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2221CC61D87383000C7A86C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		C2221CC71D87383000C7A86C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				C2221CC61D87383000C7A86C /* BaseViewController.h */,
 				C2221CC71D87383000C7A86C /* BaseViewController.m */,
 				C2C73B2E1D8B33480076FB88 /* RearViewControlller.h */,
+				5434A72C1D8C2C0E0078B7B7 /* FrontViewController.h */,
+				5434A72D1D8C2C0E0078B7B7 /* FrontViewController.m */,
 				C2C73B2F1D8B33480076FB88 /* RearViewControlller.m */,
 				C2C61FD41D71AB1D00294518 /* Main.storyboard */,
 				C2C61FD71D71AB1D00294518 /* Assets.xcassets */,
@@ -261,6 +266,7 @@
 				C2221CC81D87383000C7A86C /* BaseViewController.m in Sources */,
 				C2C61FD01D71AB1D00294518 /* AppDelegate.m in Sources */,
 				C2D0DBAC1D85C55F00A20C29 /* UrlContainer.m in Sources */,
+				5434A72E1D8C2C0E0078B7B7 /* FrontViewController.m in Sources */,
 				C2D0DBA91D85C23A00A20C29 /* APIServerMethods.m in Sources */,
 				C2C61FCD1D71AB1D00294518 /* main.m in Sources */,
 				C2C73B301D8B33480076FB88 /* RearViewControlller.m in Sources */,

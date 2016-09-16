@@ -10,6 +10,7 @@
 #import "BaseViewController.h"
 #import "RearViewControlller.h"
 #import "SWRevealViewController.h"
+#import "FrontViewController.h"
 #import "AppDelegate.h"
 
 @interface Router ()
@@ -35,31 +36,40 @@
 #pragma mark - settings
 
 - (void)setup{
+    id userDef = [[NSUserDefaults standardUserDefaults] valueForKey:@"VKAccessToken"];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    appDelegate.window = window;
+
+        
+    //    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //    appDelegate.window = window;
+        
+        FrontViewController *frontViewController = [[FrontViewController alloc] init];
+        RearViewControlller *rearViewController = [[RearViewControlller alloc] init];
+        
+        UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+        UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+        
+        SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
+        _reveal = revealController;
+        
+        
+        //revealController.bounceBackOnOverdraw=NO;
+        //revealController.stableDragOnOverdraw=YES;
+        
+    //    self.viewController = revealController;
+        
+        
     
-    BaseViewController *frontViewController = [[BaseViewController alloc] init];
-    RearViewControlller *rearViewController = [[RearViewControlller alloc] init];
+
+        BaseViewController *vc = [BaseViewController new];
     
-    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
-    
-    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
-    _reveal = revealController;
-    
-    
-    //revealController.bounceBackOnOverdraw=NO;
-    //revealController.stableDragOnOverdraw=YES;
-    
-//    self.viewController = revealController;
-    
-    appDelegate.window.rootViewController = revealController;
-    [appDelegate.window makeKeyAndVisible];
+        if (userDef){
+            appDelegate.window.rootViewController = revealController;
+        }else{
+            appDelegate.window.rootViewController = vc;
+        }
+        [appDelegate.window makeKeyAndVisible];
 }
 
-- (SWRevealViewController *)getReveal{
-    return _reveal;
-}
 
 @end

@@ -36,25 +36,6 @@
 
 - (void)initStartup{
 //    Router *router = [Router new];
-    
-     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    
-//    SWRevealViewController *revealController = [self revealViewController];
-    UIWindow *window = appDelegate.window;
-    SWRevealViewController *revealController = (id)window.rootViewController;
-    
-    
-    [revealController panGestureRecognizer];
-    [revealController tapGestureRecognizer];
-    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Show"
-                                                                         style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
-//    
-//    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"]
-//                                                                         style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
-    
-    self.navigationItem.leftBarButtonItem = revealButtonItem;
-    
-    
     _vKwebView = [[UIWebView alloc] init];
     self.vKwebView.delegate = self;
     
@@ -127,7 +108,7 @@
 
         [self.vKwebView removeFromSuperview];
         self.vKwebView = nil;
-        
+        Router *router = [Router new];
     } else if ([webView.request.URL.absoluteString rangeOfString:@"error"].location != NSNotFound) {
         NSLog(@"Error: %@", webView.request.URL.absoluteString);
         [self dismissViewControllerAnimated:YES completion:nil];

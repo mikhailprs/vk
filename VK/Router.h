@@ -11,6 +11,5 @@
 
 @interface Router : NSObject
 
-- (SWRevealViewController *)getReveal;
 
 @end
